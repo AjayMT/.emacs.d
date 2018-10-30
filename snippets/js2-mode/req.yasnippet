@@ -1,0 +1,4 @@
+# name: require(...)
+# key: req
+# --
+let ${1:$(s-lower-camel-case (file-name-nondirectory yas/text))} = require($1);$0

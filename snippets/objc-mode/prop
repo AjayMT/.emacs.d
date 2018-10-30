@@ -1,0 +1,4 @@
+# name: @property (...) ...
+# key: prop
+# --
+@property (${1:nonatomic, }${2:retain}) ${3:int} ${4:*$3};$0

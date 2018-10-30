@@ -1,0 +1,8 @@
+.DS_Store
+ac-comphist.dat
+eshell/*
+auto-save-list/*
+.litable-lists.el
+projectile-bookmarks.eld
+games/
+url/
