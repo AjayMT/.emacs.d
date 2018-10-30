@@ -1,3 +1,4 @@
+
 ;; Load path
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/static-plugins")
@@ -16,7 +17,6 @@
 (setq c-default-style "linux"
       c-basic-offset 2)
 
-
 ;; Some org-mode stuff
 (setq org-src-fontify-natively t)
 (setq org-support-shift-select t)
@@ -25,7 +25,7 @@
 (delete-selection-mode 1)
 
 ;; Paren-matching stuff
-(setq show-paren-style 'expression)
+(setq show-paren-style 'mixed)
 
 ;; Enable ido-mode
 (ido-mode 1)
@@ -104,7 +104,7 @@
 (diminish 'auto-complete-mode)
 (diminish 'projectile-mode "Pr")
 
-;; We don't need no scroll bars
+;; No scroll bars
 (scroll-bar-mode -1)
 
 ;; Theme loading
