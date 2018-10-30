@@ -1,3 +1,6 @@
+
+(require 'paredit)
+
 ;; Untabify a whole buffer
 (defun untabify-buffer ()
   (interactive)
