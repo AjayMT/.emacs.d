@@ -1,13 +1,10 @@
 
 ;; Load path
 (add-to-list 'load-path "~/.emacs.d/lisp")
-(add-to-list 'load-path "~/.emacs.d/static-plugins")
-(add-to-list 'load-path "~/.emacs.d/static-plugins/auto-complete")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/static-themes") ; theme load path
 
 ;; Loading stuff
 (require 'package)
-(require 'auto-complete-config)
 (load "customize.el")
 
 ;; Indentation stuff
@@ -15,7 +12,7 @@
 (setq js-indent-level 2)
 (setq soft-tabs t)
 (setq c-default-style "linux"
-	  c-basic-offset 2)
+      c-basic-offset 2)
 
 ;; Some org-mode stuff
 (setq org-src-fontify-natively t)
@@ -51,6 +48,9 @@
 
 ;; Initialize package.el
 (package-initialize)
+
+;; auto completion
+(require 'auto-complete)
 
 ;; Markdown mode customization
 (setq markdown-command "marked")
