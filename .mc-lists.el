@@ -25,6 +25,7 @@
 (setq mc/cmds-to-run-once
       '(
 		end-of-buffer
+		help-for-help
 		indent-for-tab-command
 		kill-this-buffer
 		org-promote-subtree

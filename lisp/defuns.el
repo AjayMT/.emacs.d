@@ -32,6 +32,10 @@
 
 ;;; Advice
 
+;; enable objc-font-lock-mode when using objc-mode
+(defadvice objc-mode (after enable-font-lock-mode activate)
+  (objc-font-lock-mode 1))
+
 ;; Indent with tabs when using go mode
 (defadvice go-mode (after indent-with-tabs activate)
   (setq soft-tabs nil))

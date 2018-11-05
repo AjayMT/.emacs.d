@@ -15,7 +15,7 @@
 (setq js-indent-level 2)
 (setq soft-tabs t)
 (setq c-default-style "linux"
-      c-basic-offset 2)
+	  c-basic-offset 2)
 
 ;; Some org-mode stuff
 (setq org-src-fontify-natively t)
@@ -109,6 +109,9 @@
 
 ;; Theme loading
 (load-theme 'monokai t)
+
+;; ignore os x bell
+(setq ring-bell-function 'ignore)
 
 ;; Extra stuff for Mac keyboards
 (setq mac-command-modifier 'meta)
