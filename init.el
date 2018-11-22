@@ -89,6 +89,9 @@
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (setq js2-highlight-level 3)
 
+;; edit golsp in python-mode for now
+(add-to-list 'auto-mode-alist '("\\.golsp\\'" . python-mode))
+
 ;; Key-chord
 (key-chord-mode 1)
 
