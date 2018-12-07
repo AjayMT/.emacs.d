@@ -111,7 +111,7 @@
 (scroll-bar-mode -1)
 
 ;; Theme loading
-(load-theme 'monokai t)
+(load-theme 'dracula t)
 
 ;; ignore os x bell
 (setq ring-bell-function 'ignore)
@@ -122,4 +122,4 @@
 (setq ns-function-modifier 'hyper)
 
 ;; Frame size
-(setq initial-frame-alist '((width . 82) (height . 43)))
+(setq initial-frame-alist '((width . 82) (height . 39)))
