@@ -1,2 +1,0 @@
-;;; -*- no-byte-compile: t -*-
-(define-package "dart-mode" "20181212.2219" "Major mode for editing Dart files" '((emacs "24.5") (cl-lib "0.5") (dash "2.10.0") (flycheck "0.23") (s "1.10")) :stars '(#("81" 0 2 (font-lock-face paradox-star-face))) :commit "ac1485924b22ee8b8cd10734e11db6954d694d7e" :keywords '("language") :authors '(("Natalie Weizenbaum")) :maintainer '("Natalie Weizenbaum") :url "https://github.com/nex3/dart-mode")
