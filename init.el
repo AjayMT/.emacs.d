@@ -30,9 +30,6 @@
 ;; Stop creating #autosave# files
 (setq autosave-default nil)
 
-;; Highlight current line
-(global-hl-line-mode 1)
-
 ;; Scroll by 1 line instead of pages
 (setq scroll-step 1)
 

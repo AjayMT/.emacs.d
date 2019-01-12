@@ -26,6 +26,7 @@
 
 (setq mc/cmds-to-run-once
       '(
+		autopair-newline
 		end-of-buffer
 		help-for-help
 		indent-for-tab-command
