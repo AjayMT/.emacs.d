@@ -14,14 +14,14 @@
 ;; Toggle soft tabs
 (defun toggle-soft-tabs ()
   (interactive)
-  (setq soft-tabs (not soft-tabs)))
+  (setq indent-tabs-mode (not indent-tabs-mode)))
 
 ;; Properly indent a whole buffer
 (defun indent-buffer ()
   (interactive)
   (delete-trailing-whitespace (point-min) (point-max))
   (indent-region (point-min) (point-max))
-  (if soft-tabs
+  (if (not indent-tabs-mode)
       (untabify-buffer)
     (tabify-buffer)))
 
@@ -38,7 +38,7 @@
 
 ;; Indent with tabs when using go mode
 (defadvice go-mode (after indent-with-tabs activate)
-  (setq soft-tabs nil))
+  (setq indent-tabs-mode t))
 
 ;; Turn on haskell indentation after activating haskell-mode
 (defadvice haskell-mode (after turn-on-indentation activate)

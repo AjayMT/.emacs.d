@@ -7,13 +7,6 @@
 (require 'package)
 (load "customize.el")
 
-;; Indentation stuff
-(setq indent-tabs-mode nil)
-(setq js-indent-level 2)
-(setq soft-tabs t)
-(setq c-default-style "linux"
-      c-basic-offset 2)
-
 ;; Some org-mode stuff
 (setq org-src-fontify-natively t)
 (setq org-support-shift-select t)
@@ -117,6 +110,12 @@
 (setq mac-command-modifier 'meta)
 (setq mac-option-modifier 'super)
 (setq ns-function-modifier 'hyper)
+
+;; Indentation stuff
+(setq-default indent-tabs-mode nil)
+(setq js-indent-level 2)
+(setq c-default-style "linux"
+      c-basic-offset 2)
 
 ;; Frame size
 (setq initial-frame-alist '((width . 82) (height . 39)))
