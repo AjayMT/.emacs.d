@@ -30,6 +30,12 @@
   (setq tab-width 2))
 (add-hook 'json-mode-hook 'ajaymt/json-mode-hook)
 
+;; Add hook to java-mode
+(defun ajaymt/java-mode-hook ()
+  (setq c-basic-offset 4
+        tab-width 4))
+(add-hook 'java-mode-hook 'ajaymt/java-mode-hook)
+
 ;;; Advice
 
 ;; enable objc-font-lock-mode when using objc-mode
