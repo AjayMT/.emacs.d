@@ -1,2 +1,0 @@
-;;; -*- no-byte-compile: t -*-
-(define-package "dart-mode" "20190117.1644" "Major mode for editing Dart files" '((emacs "24.5") (cl-lib "0.5") (dash "2.10.0") (flycheck "0.23") (s "1.10")) :commit "9d7246971d8593fb8634a8813231679afd86b49f" :keywords '("languages") :authors '(("Natalie Weizenbaum") ("Brady Trainor" . "mail@bradyt.com")) :maintainer '("Brady Trainor" . "mail@bradyt.com") :url "https://github.com/bradyt/dart-mode")
