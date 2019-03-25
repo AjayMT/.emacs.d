@@ -38,6 +38,11 @@
 
 ;;; Advice
 
+;; enable auto-complete-mode when using rust-mode
+;; not sure why this doesn't happen automatically
+(defadvice rust-mode (after enable-auto-complete activate)
+  (auto-complete-mode 1))
+
 ;; enable objc-font-lock-mode when using objc-mode
 (defadvice objc-mode (after enable-font-lock-mode activate)
   (objc-font-lock-mode 1))

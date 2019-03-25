@@ -119,3 +119,4 @@
 
 ;; Frame size
 (setq initial-frame-alist '((width . 82) (height . 39)))
+(put 'upcase-region 'disabled nil)
