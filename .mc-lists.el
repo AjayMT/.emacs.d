@@ -17,6 +17,7 @@
         indent-buffer
         kill-region
         markdown-exdent-or-delete
+        ns-copy-including-secondary
         nxml-electric-slash
         org-self-insert-command
         scroll-up-line
