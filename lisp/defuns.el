@@ -53,7 +53,7 @@
 
 ;; Turn on haskell indentation after activating haskell-mode
 (defadvice haskell-mode (after turn-on-indentation activate)
-  (turn-on-haskell-indentation))
+  (haskell-indentation-mode))
 
 ;; Bind litable-refresh to a key
 (defadvice litable-mode (after bind-litable-refresh activate)
