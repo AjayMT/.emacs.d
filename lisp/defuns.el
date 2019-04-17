@@ -69,8 +69,7 @@
   (define-key paredit-mode-map (kbd "C-c C-;") 'paredit-comment-dwim)
   (define-key paredit-mode-map (kbd "M-;") nil))
 
-;; Activate paredit-mode after activating emacs-lisp-mode or lisp-mode
-;; or racket-mode
+;; Activate paredit-mode after activating lisp modes
 (defadvice emacs-lisp-mode (after activate-paredit-mode activate)
   (paredit-mode 1))
 
@@ -78,6 +77,9 @@
   (paredit-mode 1))
 
 (defadvice racket-mode (after activate-paredit-mode activate)
+  (paredit-mode 1))
+
+(defadvice clojure-mode (after activate-paredit-mode activate)
   (paredit-mode 1))
 
 ;; Rebind C-j after activating lisp-interaction-mode

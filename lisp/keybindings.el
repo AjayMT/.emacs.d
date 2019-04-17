@@ -5,6 +5,7 @@
 (global-set-key (kbd "C-c n") 'indent-buffer)
 (global-set-key [f5] 'eval-print-last-sexp)
 (global-unset-key (kbd "C-x C-b"))
+(global-unset-key (kbd "C-x f"))
 
 ;; multiple-cursors
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
