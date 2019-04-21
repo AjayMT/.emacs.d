@@ -38,11 +38,6 @@
 
 ;;; Advice
 
-;; enable auto-complete-mode when using rust-mode
-;; not sure why this doesn't happen automatically
-(defadvice rust-mode (after enable-auto-complete activate)
-  (auto-complete-mode 1))
-
 ;; enable objc-font-lock-mode when using objc-mode
 (defadvice objc-mode (after enable-font-lock-mode activate)
   (objc-font-lock-mode 1))
@@ -85,10 +80,6 @@
 ;; Rebind C-j after activating lisp-interaction-mode
 (defadvice lisp-interaction-mode (after rebind-c-j activate)
   (define-key paredit-mode-map (kbd "C-j") 'eval-print-last-sexp))
-
-;; Bind auto-complete to a key
-(defadvice auto-complete-mode (after bind-auto-complete activate)
-  (define-key ac-mode-map (kbd "C-,") 'auto-complete))
 
 ;; Enable visual-line-mode after enabling markdown-mode
 (defadvice markdown-mode (after activate-visual-line activate)

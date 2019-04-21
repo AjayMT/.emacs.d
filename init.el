@@ -39,8 +39,13 @@
 ;; Initialize package.el
 (package-initialize)
 
-;; auto completion
-(require 'auto-complete)
+;; company-mode
+(require 'company)
+(global-company-mode 1)
+
+;; helm-mode
+(require 'helm)
+(helm-mode 1)
 
 ;; Markdown mode customization
 (setq markdown-command "marked")
@@ -67,11 +72,6 @@
 (setq yas-snippet-dirs '("~/.emacs.d/snippets"))
 (yas-global-mode 1)
 
-;; AutoComplete
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
-(ac-config-default)
-(ac-set-trigger-key "<s-tab>")
-
 ;; Don't use an audible bell
 (setq visible-bell t)
 
@@ -94,8 +94,9 @@
 (diminish 'yas-minor-mode)
 (diminish 'mo-vi-ment-mode)
 (diminish 'autopair-mode)
-(diminish 'auto-complete-mode)
 (diminish 'projectile-mode "Pr")
+(diminish 'company-mode)
+(diminish 'helm-mode)
 
 ;; No scroll bars
 (scroll-bar-mode -1)
