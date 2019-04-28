@@ -47,6 +47,10 @@
 (require 'helm)
 (helm-mode 1)
 
+;; intero-mode
+(require 'intero)
+(intero-global-mode 1)
+
 ;; Markdown mode customization
 (setq markdown-command "marked")
 
