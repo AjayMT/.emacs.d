@@ -51,6 +51,13 @@
 (require 'intero)
 (intero-global-mode 1)
 
+;; C/C++-mode hooks
+(add-hook 'c-mode-hook 'irony-mode)
+(add-hook 'c++-mode-hook 'irony-mode)
+(add-hook 'c-mode-hook 'flycheck-mode)
+(add-hook 'c++-mode-hook 'flycheck-mode)
+(add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
+
 ;; Markdown mode customization
 (setq markdown-command "marked")
 

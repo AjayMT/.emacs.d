@@ -30,6 +30,7 @@
 
 (setq mc/cmds-to-run-once
       '(
+        abbrev-prefix-mark
         autopair-newline
         end-of-buffer
         help-for-help
