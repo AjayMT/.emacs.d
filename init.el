@@ -1,11 +1,13 @@
 
 ;; Load path
 (add-to-list 'load-path "~/.emacs.d/lisp")
+(add-to-list 'load-path "~/.emacs.d/static-plugins")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/static-themes") ; theme load path
 
 ;; Loading stuff
 (require 'package)
 (load "customize.el")
+(load "ld-mode.el")
 
 ;; Some org-mode stuff
 (setq org-src-fontify-natively t)
@@ -16,9 +18,6 @@
 
 ;; Paren-matching stuff
 (setq show-paren-style 'mixed)
-
-;; Enable ido-mode
-(ido-mode 1)
 
 ;; Stop creating #autosave# files
 (setq autosave-default nil)
@@ -60,9 +59,6 @@
 
 ;; Markdown mode customization
 (setq markdown-command "marked")
-
-;; Enable flx-ido mode
-(flx-ido-mode 1)
 
 ;; Enable projectile globally
 (projectile-global-mode 1)

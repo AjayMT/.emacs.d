@@ -19,9 +19,10 @@
 ;; expand-region
 (global-set-key (kbd "C-#") 'er/expand-region)
 
-;; smex
-(global-set-key (kbd "M-x") 'smex)
+;; helm
+(global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
 
 ;; iy-go-to-char
 (key-chord-define-global "fj" 'iy-go-to-char)
