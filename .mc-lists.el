@@ -15,6 +15,7 @@
         c-indent-line-or-region
         electric-newline-and-maybe-indent
         end-of-visual-line
+        helm-M-x
         indent-buffer
         kill-region
         markdown-exdent-or-delete

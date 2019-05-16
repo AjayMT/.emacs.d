@@ -89,6 +89,10 @@
 ;; edit golsp in python-mode for now
 (add-to-list 'auto-mode-alist '("\\.golsp\\'" . python-mode))
 
+;; edit assembly with nasm-mode by default
+(add-to-list 'auto-mode-alist '("\\.s\\'" . nasm-mode))
+(add-to-list 'auto-mode-alist '("\\.asm\\'" . nasm-mode))
+
 ;; Key-chord
 (key-chord-mode 1)
 
@@ -128,3 +132,4 @@
 ;; Frame size
 (setq initial-frame-alist '((width . 82) (height . 39)))
 (put 'upcase-region 'disabled nil)
+(put 'downcase-region 'disabled nil)
