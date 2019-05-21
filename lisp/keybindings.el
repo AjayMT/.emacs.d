@@ -4,8 +4,8 @@
 (global-set-key (kbd "M-s") 'save-buffer)
 (global-set-key (kbd "C-c n") 'indent-buffer)
 (global-set-key [f5] 'eval-print-last-sexp)
-(global-unset-key (kbd "C-x C-b"))
 (global-unset-key (kbd "C-x f"))
+(global-unset-key (kbd "C-x C-o"))
 
 ;; multiple-cursors
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
@@ -23,6 +23,9 @@
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
+(global-set-key (kbd "C-x C-b") 'helm-buffers-list)
+(global-set-key (kbd "C-x b") 'helm-buffers-list)
+(define-key helm-buffer-map (kbd "C-k") 'helm-buffer-run-kill-persistent)
 
 ;; iy-go-to-char
 (key-chord-define-global "fj" 'iy-go-to-char)

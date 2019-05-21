@@ -44,6 +44,8 @@
 
 ;; helm-mode
 (require 'helm)
+(setq helm-boring-buffer-regexp-list '("\\*.*\\*"))
+(setq helm-ff-skip-boring-files t)
 (helm-mode 1)
 
 ;; intero-mode
