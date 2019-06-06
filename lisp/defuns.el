@@ -25,6 +25,23 @@
       (untabify-buffer)
     (tabify-buffer)))
 
+;; Toggle mode-line appearance
+(defun mode-line-visual-toggle ()
+  (interactive)
+  (let ((faces-to-toggle '(mode-line mode-line-inactive))
+        (invisible-color "#e8e8e8")
+        (visible-color "#a1b56c"))
+    (cond ((string= visible-color (face-attribute 'mode-line :background))
+           (mapcar (lambda (face)
+                     (set-face-background face invisible-color)
+                     (set-face-attribute face nil :height 20))
+                   faces-to-toggle))
+          (t
+           (mapcar (lambda (face)
+                     (set-face-background face visible-color)
+                     (set-face-attribute face nil :height (face-attribute 'default :height)))
+                   faces-to-toggle)))))
+
 ;; Add hook to json-mode
 (defun ajaymt/json-mode-hook ()
   (setq tab-width 2))

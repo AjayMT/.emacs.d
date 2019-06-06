@@ -33,6 +33,7 @@
       '(
         abbrev-prefix-mark
         autopair-newline
+        c-electric-pound
         end-of-buffer
         help-for-help
         indent-for-tab-command

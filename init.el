@@ -115,7 +115,7 @@
 (scroll-bar-mode -1)
 
 ;; Theme loading
-(load-theme 'dracula t)
+(load-theme 'basic t)
 
 ;; ignore os x bell
 (setq ring-bell-function 'ignore)
