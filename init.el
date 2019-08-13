@@ -95,9 +95,6 @@
 (add-to-list 'auto-mode-alist '("\\.s\\'" . nasm-mode))
 (add-to-list 'auto-mode-alist '("\\.asm\\'" . nasm-mode))
 
-;; Key-chord
-(key-chord-mode 1)
-
 ;; Load more stuff
 (load "keybindings.el")
 (load "defuns.el")
@@ -115,7 +112,7 @@
 (scroll-bar-mode -1)
 
 ;; Theme loading
-(load-theme 'basic t)
+(load-theme 'tango-plus t)
 
 ;; ignore os x bell
 (setq ring-bell-function 'ignore)

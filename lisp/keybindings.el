@@ -25,8 +25,3 @@
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
-(global-set-key (kbd "C-x b") 'helm-buffers-list)
-(define-key helm-buffer-map (kbd "C-k") 'helm-buffer-run-kill-persistent)
-
-;; iy-go-to-char
-(key-chord-define-global "fj" 'iy-go-to-char)
