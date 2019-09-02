@@ -129,6 +129,6 @@
       c-basic-offset 2)
 
 ;; Frame size
-(setq initial-frame-alist '((width . 82) (height . 39)))
+(setq initial-frame-alist '((width . 87) (height . 46)))
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)

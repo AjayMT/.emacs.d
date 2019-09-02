@@ -14,6 +14,7 @@
         c-electric-star
         c-indent-line-or-region
         electric-newline-and-maybe-indent
+        electric-verilog-semi
         end-of-visual-line
         helm-M-x
         indent-buffer
