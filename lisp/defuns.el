@@ -71,9 +71,9 @@
 (defadvice litable-mode (after bind-litable-refresh activate)
   (define-key litable-mode-map (kbd "C-c C-j") 'litable-refresh))
 
-;; Disable autopair-mode when we activate paredit-mode
-(defadvice paredit-mode (after disable-autopair activate)
-  (autopair-mode -1)
+;; Disable smartparens-mode when we activate paredit-mode
+(defadvice paredit-mode (after disable-smartparens activate)
+  (smartparens-mode -1)
   (diminish 'paredit-mode "()"))
 
 ;; Rebind paredit-comment-dwim

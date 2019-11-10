@@ -68,8 +68,8 @@
 ;; Paradox GitHub access token
 (setq paradox-github-token "b935df237bbae047b8d2c1b1d9a7ecdbd5310a97")
 
-;; Autopair
-(autopair-global-mode 1)
+;; Smartparens
+(smartparens-global-mode 1)
 
 ;; Mo-vi-ment-mode
 (mo-vi-ment-mode 1)
@@ -103,7 +103,7 @@
 (require 'diminish)
 (diminish 'yas-minor-mode)
 (diminish 'mo-vi-ment-mode)
-(diminish 'autopair-mode)
+(diminish 'smartparens-mode)
 (diminish 'projectile-mode "Pr")
 (diminish 'company-mode)
 (diminish 'helm-mode)

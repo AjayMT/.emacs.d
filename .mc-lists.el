@@ -15,11 +15,14 @@
         c-indent-line-or-region
         electric-newline-and-maybe-indent
         electric-verilog-semi
+        electric-verilog-tab
+        electric-verilog-tick
         end-of-visual-line
         helm-M-x
         indent-buffer
         kill-region
         markdown-exdent-or-delete
+        mips-dedent
         nasm-comment
         ns-copy-including-secondary
         nxml-electric-slash
@@ -27,6 +30,7 @@
         scroll-up-line
         sgml-slash
         smex
+        transpose-words
         yas-expand
         ))
 
@@ -39,5 +43,6 @@
         help-for-help
         indent-for-tab-command
         kill-this-buffer
+        mo-vi-ment-jump-up
         org-promote-subtree
         ))
