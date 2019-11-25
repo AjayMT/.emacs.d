@@ -8,6 +8,7 @@
 (require 'package)
 (load "customize.el")
 (load "ld-mode.el")
+(load "llvm-mode.el")
 
 ;; Some org-mode stuff
 (setq org-src-fontify-natively t)
@@ -112,7 +113,7 @@
 (scroll-bar-mode -1)
 
 ;; Theme loading
-(load-theme 'tango-plus t)
+(load-theme 'basic t)
 
 ;; ignore os x bell
 (setq ring-bell-function 'ignore)
@@ -122,6 +123,9 @@
 (setq mac-option-modifier 'super)
 (setq ns-function-modifier 'hyper)
 
+;; Enable mac ligatures
+(mac-auto-operator-composition-mode 1)
+
 ;; Indentation stuff
 (setq-default indent-tabs-mode nil)
 (setq js-indent-level 2)
@@ -129,6 +133,6 @@
       c-basic-offset 2)
 
 ;; Frame size
-(setq initial-frame-alist '((width . 87) (height . 46)))
+(setq initial-frame-alist '((width . 88) (height . 54)))
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)

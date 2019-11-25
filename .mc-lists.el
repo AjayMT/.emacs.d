@@ -13,6 +13,7 @@
         c-electric-slash
         c-electric-star
         c-indent-line-or-region
+        copy-region-as-kill
         electric-newline-and-maybe-indent
         electric-verilog-semi
         electric-verilog-tab
