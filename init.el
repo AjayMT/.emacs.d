@@ -113,7 +113,7 @@
 (scroll-bar-mode -1)
 
 ;; Theme loading
-(load-theme 'basic t)
+(load-theme 'underwater t)
 
 ;; ignore os x bell
 (setq ring-bell-function 'ignore)
