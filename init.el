@@ -9,6 +9,7 @@
 (load "customize.el")
 (load "ld-mode.el")
 (load "llvm-mode.el")
+(load "gas-mode.el")
 
 ;; Some org-mode stuff
 (setq org-src-fontify-natively t)
@@ -113,7 +114,7 @@
 (scroll-bar-mode -1)
 
 ;; Theme loading
-(load-theme 'underwater t)
+(load-theme 'ir-black t)
 
 ;; ignore os x bell
 (setq ring-bell-function 'ignore)

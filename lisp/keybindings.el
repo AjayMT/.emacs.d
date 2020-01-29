@@ -7,6 +7,7 @@
 (global-set-key (kbd "s-z") 'undo)
 (global-set-key (kbd "s-c") 'copy-region-as-kill)
 (global-set-key (kbd "s-x") 'kill-region)
+(global-set-key (kbd "s-l") 'goto-line)
 (global-set-key [f5] 'eval-print-last-sexp)
 (global-unset-key (kbd "C-x f"))
 (global-unset-key (kbd "C-x C-o"))
