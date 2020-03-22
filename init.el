@@ -21,6 +21,9 @@
 ;; Paren-matching stuff
 (setq show-paren-style 'mixed)
 
+;; Cursor type
+(setq-default cursor-type 'bar)
+
 ;; Stop creating #autosave# files
 (setq autosave-default nil)
 
@@ -114,7 +117,7 @@
 (scroll-bar-mode -1)
 
 ;; Theme loading
-(load-theme 'ir-black t)
+(load-theme 'habamax t)
 
 ;; ignore os x bell
 (setq ring-bell-function 'ignore)
