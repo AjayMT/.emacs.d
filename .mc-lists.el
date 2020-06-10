@@ -44,6 +44,7 @@
         c-electric-pound
         end-of-buffer
         help-for-help
+        help-with-tutorial
         indent-for-tab-command
         kill-this-buffer
         mo-vi-ment-jump-up

@@ -63,6 +63,7 @@
 (add-hook 'c-mode-hook 'flycheck-mode)
 (add-hook 'c++-mode-hook 'flycheck-mode)
 (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
+(add-hook 'irony-mode-hook #'irony-eldoc)
 
 ;; Markdown mode customization
 (setq markdown-command "marked")
@@ -95,6 +96,9 @@
 
 ;; edit golsp in python-mode for now
 (add-to-list 'auto-mode-alist '("\\.golsp\\'" . python-mode))
+
+;; edit charm interface (.ci) files in c-mode
+(add-to-list 'auto-mode-alist '("\\.ci\\'" . c-mode))
 
 ;; edit assembly with nasm-mode by default
 (add-to-list 'auto-mode-alist '("\\.s\\'" . nasm-mode))
@@ -131,6 +135,7 @@
 (mac-auto-operator-composition-mode 1)
 
 ;; Indentation stuff
+(setq-default show-trailing-whitespace 1)
 (setq-default indent-tabs-mode nil)
 (setq js-indent-level 2)
 (setq c-default-style "linux"
