@@ -26,10 +26,14 @@
         kill-region
         markdown-exdent-or-delete
         mips-dedent
+        mo-vi-ment-jump-down
         nasm-comment
         ns-copy-including-secondary
         nxml-electric-slash
         org-self-insert-command
+        orgtbl-hijacker-command-100
+        orgtbl-hijacker-command-109
+        orgtbl-self-insert-command
         scroll-up-line
         sgml-slash
         smex
@@ -47,6 +51,7 @@
         help-with-tutorial
         indent-for-tab-command
         kill-this-buffer
+        markdown-outdent-or-delete
         mo-vi-ment-jump-up
         org-promote-subtree
         ))
