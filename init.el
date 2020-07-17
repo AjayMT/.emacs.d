@@ -108,6 +108,9 @@
 (load "keybindings.el")
 (load "defuns.el")
 
+;; dumb-jump-mode
+(dumb-jump-mode 1)
+
 ;; Diminish some minor modes
 (require 'diminish)
 (diminish 'yas-minor-mode)
@@ -116,6 +119,11 @@
 (diminish 'projectile-mode "Pr")
 (diminish 'company-mode)
 (diminish 'helm-mode)
+(diminish 'eldoc-mode)
+(diminish 'irony-mode)
+(diminish 'abbrev-mode)
+(diminish 'projectile-mode)
+(diminish 'dumb-jump-mode)
 
 ;; No scroll bars
 (scroll-bar-mode -1)
@@ -143,5 +151,8 @@
 
 ;; Frame size
 (setq initial-frame-alist '((width . 88) (height . 54)))
+
+;; Enabling things
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
+(put 'dired-find-alternate-file 'disabled nil)
