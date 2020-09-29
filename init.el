@@ -51,11 +51,9 @@
 (require 'helm)
 (setq helm-boring-buffer-regexp-list '("\\*.*\\*"))
 (setq helm-ff-skip-boring-files t)
+(setq helm-ff-auto-update-initial-value t)
+(setq completion-styles '(helm-flex))
 (helm-mode 1)
-
-;; intero-mode
-(require 'intero)
-(intero-global-mode 1)
 
 ;; C/C++-mode hooks
 (add-hook 'c-mode-hook 'irony-mode)
@@ -129,7 +127,7 @@
 (scroll-bar-mode -1)
 
 ;; Theme loading
-(load-theme 'habamax t)
+(load-theme 'acme t)
 
 ;; ignore os x bell
 (setq ring-bell-function 'ignore)
@@ -156,3 +154,15 @@
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
 (put 'dired-find-alternate-file 'disabled nil)
+
+;; merlin-mode
+(let ((opam-share (ignore-errors (car (process-lines "opam" "config" "var" "share")))))
+  (when (and opam-share (file-directory-p opam-share))
+    ;; Register Merlin
+    (add-to-list 'load-path (expand-file-name "emacs/site-lisp" opam-share))
+    (autoload 'merlin-mode "merlin" nil t nil)
+    ;; Automatically start it in OCaml buffers
+    (add-hook 'tuareg-mode-hook 'merlin-mode t)
+    (add-hook 'caml-mode-hook 'merlin-mode t)
+    ;; Use opam switch to lookup ocamlmerlin binary
+    (setq merlin-command 'opam)))

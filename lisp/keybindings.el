@@ -33,3 +33,4 @@
 (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
 (define-key helm-buffer-map (kbd "C-k") 'helm-buffer-run-kill-persistent)
+(define-key helm-find-files-map "\t" 'helm-execute-persistent-action)
