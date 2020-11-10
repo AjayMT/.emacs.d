@@ -3,6 +3,9 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+        LaTeX-insert-left-brace
+        TeX-insert-backslash
+        TeX-insert-dollar
         autopair-insert-opening
         autopair-insert-or-skip-quote
         autopair-skip-close-maybe

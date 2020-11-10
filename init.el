@@ -37,7 +37,7 @@
 (setq custom-file "~/.emacs.d/lisp/customize.el")
 
 ;; Package archives
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
 
 ;; Initialize package.el
@@ -50,7 +50,6 @@
 ;; helm-mode
 (require 'helm)
 (setq helm-boring-buffer-regexp-list '("\\*.*\\*"))
-(setq helm-ff-skip-boring-files t)
 (setq helm-ff-auto-update-initial-value t)
 (setq completion-styles '(helm-flex))
 (helm-mode 1)
@@ -127,7 +126,7 @@
 (scroll-bar-mode -1)
 
 ;; Theme loading
-(load-theme 'acme t)
+(load-theme 'solarized-dark t)
 
 ;; ignore os x bell
 (setq ring-bell-function 'ignore)
