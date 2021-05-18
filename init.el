@@ -21,9 +21,6 @@
 ;; Paren-matching stuff
 (setq show-paren-style 'mixed)
 
-;; Cursor type
-(setq-default cursor-type 'bar)
-
 ;; Stop creating #autosave# files
 (setq autosave-default nil)
 
@@ -43,16 +40,13 @@
 ;; Initialize package.el
 (package-initialize)
 
+;; ivy-mode
+(require 'ivy)
+(ivy-mode 1)
+
 ;; company-mode
 (require 'company)
 (global-company-mode 1)
-
-;; helm-mode
-(require 'helm)
-(setq helm-boring-buffer-regexp-list '("\\*.*\\*"))
-(setq helm-ff-auto-update-initial-value t)
-(setq completion-styles '(helm-flex))
-(helm-mode 1)
 
 ;; C/C++-mode hooks
 (add-hook 'c-mode-hook 'irony-mode)
@@ -110,12 +104,12 @@
 
 ;; Diminish some minor modes
 (require 'diminish)
+(diminish 'ivy-mode)
 (diminish 'yas-minor-mode)
 (diminish 'mo-vi-ment-mode)
 (diminish 'smartparens-mode)
 (diminish 'projectile-mode "Pr")
 (diminish 'company-mode)
-(diminish 'helm-mode)
 (diminish 'eldoc-mode)
 (diminish 'irony-mode)
 (diminish 'abbrev-mode)
@@ -126,7 +120,7 @@
 (scroll-bar-mode -1)
 
 ;; Theme loading
-(load-theme 'solarized-dark t)
+(load-theme 'basic t)
 
 ;; ignore os x bell
 (setq ring-bell-function 'ignore)
