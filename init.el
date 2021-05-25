@@ -2,7 +2,6 @@
 ;; Load path
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/static-plugins")
-(add-to-list 'custom-theme-load-path "~/.emacs.d/static-themes") ; theme load path
 
 ;; Loading stuff
 (require 'package)
