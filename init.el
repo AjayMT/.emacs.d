@@ -2,6 +2,7 @@
 ;; Load path
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/static-plugins")
+(add-to-list 'custom-theme-load-path "~/.emacs.d/static-themes")
 
 ;; Loading stuff
 (require 'package)
@@ -119,7 +120,7 @@
 (scroll-bar-mode -1)
 
 ;; Theme loading
-(load-theme 'tango-plus t)
+(load-theme 'acme t)
 
 ;; ignore os x bell
 (setq ring-bell-function 'ignore)
