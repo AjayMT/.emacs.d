@@ -1,4 +1,3 @@
-;; General keybindings
 (global-set-key (kbd "M--") 'scroll-up-line)
 (global-set-key (kbd "M-=") 'scroll-down-line)
 (global-set-key (kbd "M-s") 'save-buffer)
@@ -13,15 +12,9 @@
 (global-unset-key (kbd "C-x f"))
 (global-unset-key (kbd "C-x C-o"))
 (global-unset-key (kbd "C-x s"))
-
-;; multiple-cursors
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
-
-;; ace-jump-mode
 (global-set-key (kbd "C-$") 'ace-jump-mode)
-
-;; expand-region
 (global-set-key (kbd "C-#") 'er/expand-region)
