@@ -74,10 +74,6 @@
 ;; Load string manipulation functions
 (require 's)
 
-;; YASnippet
-(setq yas-snippet-dirs '("~/.emacs.d/snippets"))
-(yas-global-mode 1)
-
 ;; Don't use an audible bell
 (setq visible-bell t)
 
@@ -105,7 +101,6 @@
 ;; Diminish some minor modes
 (require 'diminish)
 (diminish 'ivy-mode)
-(diminish 'yas-minor-mode)
 (diminish 'mo-vi-ment-mode)
 (diminish 'smartparens-mode)
 (diminish 'projectile-mode "Pr")
@@ -120,7 +115,8 @@
 (scroll-bar-mode -1)
 
 ;; Theme loading
-(load-theme 'acme t)
+(when (display-graphic-p)
+  (load-theme 'acme t))
 
 ;; ignore os x bell
 (setq ring-bell-function 'ignore)

@@ -1,8 +1,0 @@
-# name: @implementation ... @end
-# key: impl
-# --
-@implementation ${1:Class}
-${2:@synthesize ${3:...};}
-
-$0
-@end
