@@ -8,6 +8,7 @@
 (load "llvm-mode.el")
 (load "gas-mode.el")
 
+(global-auto-revert-mode t)
 (setq org-src-fontify-natively t)
 (setq org-support-shift-select t)
 (delete-selection-mode 1)
