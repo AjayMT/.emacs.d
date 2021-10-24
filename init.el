@@ -32,6 +32,8 @@
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
 (put 'dired-find-alternate-file 'disabled nil)
+(setq tex-fontify-script nil)
+(setq font-latex-fontify-script nil)
 (setq initial-frame-alist '((width . 88) (height . 54)))
 
 (require 'package)
@@ -69,6 +71,8 @@
 (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
 (add-hook 'irony-mode-hook #'irony-eldoc)
 (add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
+(add-hook 'LaTeX-mode-hook 'turn-on-cdlatex)
+(add-hook 'LaTeX-mode-hook (lambda () (electric-indent-local-mode -1)))
 
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.golsp\\'" . python-mode))
