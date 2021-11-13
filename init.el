@@ -34,7 +34,7 @@
 (put 'dired-find-alternate-file 'disabled nil)
 (setq tex-fontify-script nil)
 (setq font-latex-fontify-script nil)
-(setq initial-frame-alist '((width . 88) (height . 54)))
+(setq initial-frame-alist '((top . 1) (left . 1) (width . 100) (height . 67)))
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
@@ -73,6 +73,7 @@
 (add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
 (add-hook 'LaTeX-mode-hook 'turn-on-cdlatex)
 (add-hook 'LaTeX-mode-hook (lambda () (electric-indent-local-mode -1)))
+(add-hook 'LaTeX-mode-hook (lambda () (visual-line-mode 1)))
 
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.golsp\\'" . python-mode))
@@ -85,7 +86,7 @@
 (load "defuns.el")
 
 (when (display-graphic-p)
-  (load-theme 'acme t))
+  (load-theme 'basic t))
 
 ;; merlin-mode
 (let ((opam-share (ignore-errors (car (process-lines "opam" "config" "var" "share")))))

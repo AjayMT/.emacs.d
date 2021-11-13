@@ -43,52 +43,28 @@
                    faces-to-toggle)))))
 
 ;;; Hooks
-
-(defun ajaymt/json-mode-hook ()
-  (setq tab-width 2))
-(add-hook 'json-mode-hook 'ajaymt/json-mode-hook)
-
-(defun ajaymt/java-mode-hook ()
-  (setq c-basic-offset 4
-        tab-width 4))
-(add-hook 'java-mode-hook 'ajaymt/java-mode-hook)
-
-;;; Advice
-
-(defadvice objc-mode (after enable-font-lock-mode activate)
-  (objc-font-lock-mode 1))
-
-(defadvice go-mode (after indent-with-tabs activate)
-  (setq indent-tabs-mode t))
-
-(defadvice haskell-mode (after turn-on-indentation activate)
-  (haskell-indentation-mode))
-
-(defadvice litable-mode (after bind-litable-refresh activate)
-  (define-key litable-mode-map (kbd "C-c C-j") 'litable-refresh))
-
-(defadvice paredit-mode (after disable-smartparens activate)
-  (smartparens-mode -1)
-  (diminish 'paredit-mode "()"))
-
-(defadvice paredit-mode (after rebind-paredit-comment-dwim activate)
-  (define-key paredit-mode-map (kbd "C-c C-;") 'paredit-comment-dwim)
-  (define-key paredit-mode-map (kbd "M-;") nil))
-
-(defadvice emacs-lisp-mode (after activate-paredit-mode activate)
-  (paredit-mode 1))
-
-(defadvice lisp-mode (after activate-paredit-mode activate)
-  (paredit-mode 1))
-
-(defadvice racket-mode (after activate-paredit-mode activate)
-  (paredit-mode 1))
-
-(defadvice clojure-mode (after activate-paredit-mode activate)
-  (paredit-mode 1))
-
-(defadvice lisp-interaction-mode (after rebind-c-j activate)
-  (define-key paredit-mode-map (kbd "C-j") 'eval-print-last-sexp))
-
-(defadvice markdown-mode (after activate-visual-line activate)
-  (visual-line-mode 1))
+(add-hook 'json-mode-hook (lambda () (setq tab-width 2)))
+(add-hook 'java-mode-hook
+          (lambda ()
+            (setq c-basic-offset 4
+                  tab-width 4)))
+(add-hook 'objc-mode-hook (lambda () (objc-font-lock-mode 1)))
+(add-hook 'go-mode-hook (lambda () (setq indent-tabs-mode t)))
+(add-hook 'haskell-mode-hook (lambda () (haskell-indentation-mode 1)))
+(add-hook 'litable-mode-hook
+          (lambda ()
+            (define-key litable-mode-map (kbd "C-c C-j") 'litable-refresh)))
+(add-hook 'paredit-mode-hook
+          (lambda ()
+            (smartparens-mode -1)
+            (diminish 'paredit-mode "()")
+            (define-key paredit-mode-map (kbd "C-c C-;") 'paredit-comment-dwim)
+            (define-key paredit-mode-map (kbd "M-;") nil)))
+(add-hook 'emacs-lisp-mode-hook (lambda () (paredit-mode 1)))
+(add-hook 'lisp-mode-hook (lambda () (paredit-mode 1)))
+(add-hook 'racket-mode-hook (lambda () (paredit-mode 1)))
+(add-hook 'clojure-mode-hook (lambda () (paredit-mode 1)))
+(add-hook 'lisp-interaction-mode-hook
+          (lambda ()
+            (define-key paredit-mode-map (kbd "C-j") 'eval-print-last-sexp)))
+(add-hook 'markdown-mode-hook (lambda () (visual-line-mode 1)))
