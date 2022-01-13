@@ -18,6 +18,7 @@
         c-electric-slash
         c-electric-star
         c-indent-line-or-region
+        cdlatex-sub-superscript
         copy-region-as-kill
         electric-newline-and-maybe-indent
         electric-verilog-semi

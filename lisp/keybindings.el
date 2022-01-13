@@ -12,6 +12,7 @@
 (global-unset-key (kbd "C-x f"))
 (global-unset-key (kbd "C-x C-o"))
 (global-unset-key (kbd "C-x s"))
+(global-unset-key (kbd "C-x C-b"))
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
