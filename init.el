@@ -41,8 +41,7 @@
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (package-initialize)
 
-(require 'ivy)
-(ivy-mode 1)
+(selectrum-mode +1)
 (require 'company)
 (global-company-mode 1)
 (projectile-global-mode 1)
@@ -86,7 +85,8 @@
 (load "defuns.el")
 
 (when (display-graphic-p)
-  (load-theme 'basic t))
+  (load-theme 'habamax t)
+  (add-to-list 'default-frame-alist '(font . "Fira Code 11")))
 
 ;; merlin-mode
 (let ((opam-share (ignore-errors (car (process-lines "opam" "config" "var" "share")))))
