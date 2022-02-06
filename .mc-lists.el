@@ -59,4 +59,5 @@
         markdown-outdent-or-delete
         mo-vi-ment-jump-up
         org-promote-subtree
+        view-hello-file
         ))
