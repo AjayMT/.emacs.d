@@ -38,7 +38,6 @@
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (package-initialize)
 
 (selectrum-mode +1)
@@ -85,7 +84,7 @@
 (load "defuns.el")
 
 (when (display-graphic-p)
-  (load-theme 'habamax t)
+  (load-theme 'modus-operandi t)
   (add-to-list 'default-frame-alist '(font . "Fira Code 11")))
 
 ;; merlin-mode

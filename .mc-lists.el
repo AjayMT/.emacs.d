@@ -50,6 +50,7 @@
       '(
         abbrev-prefix-mark
         autopair-newline
+        beginning-of-visual-line
         c-electric-pound
         end-of-buffer
         help-for-help
