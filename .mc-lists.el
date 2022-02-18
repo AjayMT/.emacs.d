@@ -39,6 +39,7 @@
         orgtbl-hijacker-command-100
         orgtbl-hijacker-command-109
         orgtbl-self-insert-command
+        paredit-forward-delete
         scroll-up-line
         sgml-slash
         smex
