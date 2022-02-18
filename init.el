@@ -1,7 +1,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
-(add-to-list 'load-path "~/.emacs.d/static-plugins")
-(add-to-list 'custom-theme-load-path "~/.emacs.d/static-themes")
+(add-to-list 'load-path "~/.emacs.d/plugins")
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
 (load "customize.el")
 (load "ld-mode.el")
@@ -84,8 +84,8 @@
 (load "defuns.el")
 
 (when (display-graphic-p)
-  (load-theme 'modus-operandi t)
-  (add-to-list 'default-frame-alist '(font . "Fira Code 11")))
+  (load-theme 'basic t)
+  (add-to-list 'default-frame-alist '(font . "IBM Plex Mono 11")))
 
 ;; merlin-mode
 (let ((opam-share (ignore-errors (car (process-lines "opam" "config" "var" "share")))))
