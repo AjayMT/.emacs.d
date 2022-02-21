@@ -57,7 +57,6 @@
 (require 'company)
 (global-company-mode 1)
 (projectile-global-mode 1)
-(setq paradox-github-token "b935df237bbae047b8d2c1b1d9a7ecdbd5310a97")
 (smartparens-global-mode 1)
 (mo-vi-ment-mode 1)
 (setq js2-highlight-level 3)
