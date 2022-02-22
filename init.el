@@ -39,6 +39,9 @@
 (setq make-backup-files nil)
 (setq nav-width 25)
 (setq tab-width 4)
+(when (and (equal emacs-version "27.2")
+           (eql system-type 'darwin))
+  (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3"))
 
 (global-auto-revert-mode t)
 (delete-selection-mode 1)
