@@ -99,7 +99,7 @@
 (load "defuns.el")
 
 (when (display-graphic-p)
-  (load-theme 'basic t)
+  (load-theme 'habamax t)
   (add-to-list 'default-frame-alist '(font . "IBM Plex Mono 11")))
 
 ;; merlin-mode
