@@ -1,7 +1,6 @@
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/plugins")
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
 (load "customize.el")
 (load "ld-mode.el")
