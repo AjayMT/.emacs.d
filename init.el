@@ -29,7 +29,7 @@
 (put 'dired-find-alternate-file 'disabled nil)
 (setq tex-fontify-script nil)
 (setq font-latex-fontify-script nil)
-(setq initial-frame-alist '((top . 1) (left . 1) (width . 100) (height . 67)))
+(setq initial-frame-alist '((top . 1) (left . 1) (width . 118) (height . 61)))
 (setq initial-buffer-choice t)
 (setq js2-highlight-external-variables nil)
 (setq js2-include-node-externs t)
@@ -56,6 +56,7 @@
 (package-initialize)
 
 (selectrum-mode +1)
+(selectrum-prescient-mode +1)
 (require 'company)
 (global-company-mode 1)
 (projectile-global-mode 1)
@@ -98,8 +99,8 @@
 (load "defuns.el")
 
 (when (display-graphic-p)
-  (load-theme 'habamax t)
-  (add-to-list 'default-frame-alist '(font . "IBM Plex Mono 11")))
+  (load-theme 'basic t)
+  (add-to-list 'default-frame-alist '(font . "Monaco 10")))
 
 ;; merlin-mode
 (let ((opam-share (ignore-errors (car (process-lines "opam" "config" "var" "share")))))

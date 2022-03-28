@@ -58,6 +58,7 @@
         help-with-tutorial
         indent-for-tab-command
         kill-this-buffer
+        markdown-insert-list-item
         markdown-outdent-or-delete
         mo-vi-ment-jump-up
         org-promote-subtree
