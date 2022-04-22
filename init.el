@@ -99,7 +99,7 @@
 (load "defuns.el")
 
 (when (display-graphic-p)
-  (load-theme 'basic t)
+  (load-theme 'modus-operandi t)
   (add-to-list 'default-frame-alist '(font . "Monaco 10")))
 
 ;; ocaml packages
