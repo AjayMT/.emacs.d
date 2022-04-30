@@ -100,7 +100,7 @@
 
 (when (display-graphic-p)
   (load-theme 'modus-operandi t)
-  (add-to-list 'default-frame-alist '(font . "Verdana 10")))
+  (add-to-list 'default-frame-alist '(font . "Monaco 10")))
 
 ;; ocaml packages
 (let ((opam-share (ignore-errors (car (process-lines "opam" "config" "var" "share")))))
